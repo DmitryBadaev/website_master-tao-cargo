@@ -1,19 +1,98 @@
 body {
+    background-color: $bg-color;
 }
 * {
     box-sizing: border-box;
+    font-family: 'Proxima Nova';
+    font-style: normal;
     
 }
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+ul {
+    list-style: none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-inline-start: 0;
+}
 .container {
-    max-width: 1254px;
+    max-width: 1170px;
     padding: 0 15px;
     margin: 0 auto;
 }
 .lock {
     overflow: hidden;
 }
-h1 {
-    font-family: 'Proxima Nova';
-    font-style: normal;
+// @include fluidFontSize(16px, 16px, 320px, 1280px, 16px);
+.title {
+    max-width: 463px;
+    font-weight: 700;
+    @include fluidFontSize(30px, 56px, 320px, 1280px, 56px);
+    line-height: 71px;
+    text-transform: uppercase;
+    color: $text-color;
+}
+.descr {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    color: $text-color;
+    &__slide {
+        margin-top: 8px;
+    }
+}
+.active {
+}
+.button {
+    background-color: $btn-color;
+    width: 171px;
+    height: 50px;
     font-weight: 600;
+    font-size: 15px;
+    color: $text-color;
+    border-radius: 90px;
+    border: none;
+
+    &__header {
+    }
+
+    &__slide {
+        margin-top: 37px;
+        width: 293px;
+        height: 68px;
+        text-align: left;
+        padding-left: 30px;
+        padding-right: 97px;
+        position: relative;
+        &::after {
+            content: '';
+            width: 27px;
+            height: 27px;
+            position: absolute;
+            top: 50%;
+            right: 21px;
+            transform: translateY(-50%);
+            background: url(../icon/arrow-right.svg) center (center / cover) no-repeat;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .title {
+        max-width: 100%;
+        text-align: center;
+    }
+    .descr {
+        text-align: center;
+    }
+    .button__slide {
+        // width: 100%;
+        display: block;
+        margin: 37px auto 0 auto;
+    }
 }
