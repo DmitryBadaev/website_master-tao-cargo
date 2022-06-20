@@ -1,0 +1,12 @@
+@import 'global/normalize';
+@import 'global/fonts';
+
+
+@import 'base';
+@import 'variables/mixins';
+@import 'variables/variables';
+@import 'global/fluidFontSize';
+
+
+@import 'blocks/header';
+@import 'blocks/footer';
