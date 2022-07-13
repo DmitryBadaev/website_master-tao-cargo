@@ -37,6 +37,15 @@ ul {
     text-transform: uppercase;
     color: $text-color;
 }
+.subtitle {
+    @include fluidFontSize(20px, 36px, 320px, 1280px, 36px);
+    color: $text-color;
+    text-align: center;
+    line-height: 45px;
+    text-transform: uppercase;
+
+}
+
 .descr {
     font-weight: 400;
     font-size: 20px;
