@@ -57,6 +57,12 @@ ul {
     color: $text-color;
     border-radius: 90px;
     border: none;
+    transition: 0.2s all;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.05);
+        
+    }
 
     &__header {
     }
